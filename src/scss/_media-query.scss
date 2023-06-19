@@ -1,0 +1,73 @@
+//XXL
+@media (min-width: 1401px) {
+  .reviews-section {
+    margin-top: -100px;
+  }
+}
+
+//XL
+@media (max-width: 1400px) {
+  .reviews-section {
+    margin-top: -60px;
+  }
+}
+
+//LG
+@media (max-width: 1200px) {
+  .reviews-section {
+    margin-top: -80px;
+  }
+}
+
+//MD
+@media (max-width: 991px) {
+
+  .reviews-section {
+    margin-top: -90px;
+  }
+
+
+}
+
+//SM
+@media (max-width: 767.98px) {
+  .reviews-section {
+    margin-top: 0;
+  }
+
+  .reviews-summary {
+    .wrapper {
+      padding-bottom: 40px;
+    }
+  }
+
+}
+
+
+//XS
+@media (max-width: 575px) {
+  .reviews-summary {
+    .wrapper {
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
+  }
+
+  .reviews-section {
+    margin-top: initial;
+  }
+
+  .menu-type-complaint {
+    .options {
+      min-width:500px;
+    }
+  }
+
+  .menu-type-complaint::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+
+
+
