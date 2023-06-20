@@ -10,7 +10,7 @@ function HomePage() {
                  type='article'
             />
 
-            <div className={'page-title-home min-h-lg-500px'}>
+            <div className={'page-title-home min-h-lg-550px'}>
                 <div className={'container'}>
                     <div style={{paddingTop:'15%'}}>
                         <h6 className={'text-white'}>Gramas e Jardinagem</h6>h1
@@ -38,6 +38,22 @@ function HomePage() {
                                 Na grama pontal, voce texto a ser definido voce texto a ser definido voce texto a ser definido voce texto a ser definido voce texto a ser definido voce texto a ser definido voce texto a ser definido
                             </span>
                         </div>
+                    </div>
+                </div>
+            </div>
+
+            <div className={'mt-20'}>
+                <div className={'container'}>
+                    <h5 className={'text-primary fw-normal mb-8'}>
+                        POR QUE ESCOLHER A GENTE
+                    </h5>
+                    <h1 className={'fs-2tx mb-14'}>
+                        Compre pelo site, sem complicação
+                    </h1>
+
+
+                    <div>
+
                     </div>
                 </div>
             </div>
