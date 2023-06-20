@@ -24,16 +24,11 @@ const Header = () => {
             </div>
 
             <nav className="navbar navbar-expand-lg bg-secondary min-h-100px">
-                <header className="container da-flex justify-content-between">
+                <header className="container">
                     <div>
                         <img src={logo} alt="logo" className={'mw-100px'}/>
                     </div>
 
-                    <button className="navbar-toggler" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"
-                            aria-expanded="false" aria-label="Toggle navigation">
-                        <span className="navbar-toggler-icon"></span>
-                    </button>
                     <div className={'col-6'}>
                         <div className="collapse navbar-collapse" id="navbarNavDropdown">
                             <ul className="navbar-nav fs-3 gap-3">
@@ -55,11 +50,10 @@ const Header = () => {
 
 
                     <div className={'da-flex gap-3'}>
-                        <div className={''}>
-                            <div className={'bg-white p-1 rounded-circle d-flex flex-center h-50px w-50px'}>
+                        <div >
+                            <div className={'bg-white bg-hover-primary text-hover-white p-1 rounded-circle d-flex flex-center h-50px w-50px'}>
                                 <i className="ki-solid ki-magnifier fs-2x text-primary"></i>
                             </div>
-
                         </div>
                         <div>
                             <button className={'btn btn-outline-primary text-hover-white border-hover-transparent border border-2 border-gray-300'}>
@@ -68,6 +62,11 @@ const Header = () => {
                         </div>
                     </div>
 
+                    <button className="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                        <span className="navbar-toggler-icon"></span>
+                    </button>
                 </header>
             </nav>
 
