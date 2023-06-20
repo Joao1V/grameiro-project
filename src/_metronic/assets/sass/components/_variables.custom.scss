@@ -7,16 +7,15 @@
 // Bootstrap color system
 $white: #ffffff;
 
-// Theme colors
 // Primary
 $primary: #348e38;
-$primary-active: #3864bd;
+$primary-active: rgba(52, 142, 56, 0.7);
 $primary-light: #ecf2ff;
 $primary-light-dark: #001a34;
 $primary-inverse: $white;
 
 // Secondary
-$secondary: #003366;
+$secondary: #e8f5e9;
 $secondary-active: #0c4a88;
 $secondary-light: #f2f7ff;
 $secondary-light-dark: #001a34;
@@ -49,3 +48,6 @@ $warning-active: #f1bc00;
 $warning-light: #fff8dd;
 $warning-light-dark: #392f28;
 $warning-inverse: $white;
+
+// primary2
+$primary2: #0f4229;
