@@ -6,7 +6,7 @@ const DefaultLayout = ({children}) => {
     return (
         <div className={'d-flex flex-column h-100'}>
             <Header/>
-            <main className={'h-100'}>
+            <main className={''}>
                 {children}
             </main>
             <Footer/>

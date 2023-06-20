@@ -43,7 +43,7 @@ function HomePage() {
             </div>
 
             <div className={'mt-20'}>
-                <div className={'container'}>
+                <div className={'container text-center'}>
                     <h5 className={'text-primary fw-normal mb-8'}>
                         POR QUE ESCOLHER A GENTE
                     </h5>
