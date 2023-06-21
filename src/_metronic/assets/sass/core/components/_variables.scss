@@ -44,6 +44,13 @@ $primary-active: #187de4 !default;
 $primary-light: #f1faff !default;
 $primary-inverse: $white !default;
 
+// Primary2 colors
+$primary2: #0f4229 !default;
+$primary2-active: #348E38CC !default;
+$primary2-light: #f1faff !default;
+$primary2-inverse: $white !default;
+
+//#0f4229
 // Secondary colors
 $secondary: $gray-300 !default;
 $secondary-active: $gray-400 !default;
@@ -90,6 +97,7 @@ $dark-inverse: $white !default;
 $theme-colors: (
   'light': $light,
   'primary': $primary,
+  'primary2': $primary2,
   'secondary': $secondary,
   'success': $success,
   'info': $info,
@@ -101,6 +109,7 @@ $theme-colors: (
 // Contextual active state colors
 $theme-active-colors: (
   'primary': $primary-active,
+  'primary2': $primary2-active,
   'secondary': $secondary-active,
   'light': $light-active,
   'success': $success-active,
@@ -113,6 +122,7 @@ $theme-active-colors: (
 // Contextual inverse state colors
 $theme-inverse-colors: (
   'primary': $primary-inverse,
+  'primary2': $primary2-inverse,
   'secondary': $secondary-inverse,
   'light': $light-inverse,
   'success': $success-inverse,
@@ -125,6 +135,7 @@ $theme-inverse-colors: (
 // Contextual light state colors
 $theme-light-colors: (
   'primary': $primary-light,
+  'primary2': $primary2-light,
   'secondary': $secondary-light,
   'success': $success-light,
   'info': $info-light,
@@ -137,6 +148,7 @@ $theme-light-colors: (
 $theme-text-colors: (
   'white': $white,
   'primary': $primary,
+  'primary2': $primary2,
   'secondary': $secondary,
   'light': $light,
   'success': $success,
