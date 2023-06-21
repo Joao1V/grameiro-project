@@ -4,6 +4,7 @@ import grass1 from "../../assets/img/Grass Texture_01.jpg"
 import grass2 from "../../assets/img/Grass Texture_02.jpg"
 import grass3 from "../../assets/img/Grass Texture_06.jpg"
 import grass4 from "../../assets/img/Grass Texture_13.jpg"
+import grass5 from "../../assets/img/Grass1.png"
 
 
 function HomePage() {
@@ -61,8 +62,8 @@ function HomePage() {
                             <div className={'col-12 col-md-4 col-lg-4'}>
                                 <div className={'card shadow'}>
                                     <div className={'card-flush'}>
-                                        <div className={''}>
-                                            <img src={image} alt="image" className={'mw-100 rounded-top-2'}/>
+                                        <div className={'mh-250px'}>
+                                            <img src={image} alt="image" className={'rounded-top-2 img-fluid'}/>
                                         </div>
                                         <div className={'p-8'}>
                                             <h3 style={{color:'#0f4229'}}>
@@ -149,22 +150,32 @@ function HomePage() {
             </section>
             <section className={'bg-secondary mt-20'}>
                 <div className={'container py-12'}>
-                    <h2 className={'text-primary fw-normal mb-8'}>Sobre a gente</h2>
-                    <h1 className={'fs-4x font-jost fw-semibold mb-8'}>Grama pontal!</h1>
-                    <div className={'fs-3'}>
-                        <p>Há mais de 10 anos no mercado de grama, Há mais de 10 anos no mercado de grama,</p>
-                        <div className={'text-center'}>
-                            <span className={'text-primary ls-5'}>WORK PROCESS</span>
+                    <div className={ 'row'}>
+                        <div className={'col-12 col-md-6'}>
+                            <div>
+                                <h2 className={'text-primary fw-normal mb-8'}>Sobre a gente</h2>
+                                <h1 className={'fs-4x font-jost fw-semibold mb-8'}>Grama pontal!</h1>
+                                <div className={'fs-3'}>
+                                    <p>
+                                        Há mais de 10 anos no mercado de grama, Há mais de 10 anos no mercado de grama,
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div className={'col-12 col-md-6'}>
+                            <img src={grass5} alt="grass" className={'w-100'}/>
                         </div>
                     </div>
-                </div>
-            </section>
-            <section className={'mt-3 mb-15'}>
-                <div>
+
 
                 </div>
+            </section>
+            <section className={'mt-5 mb-15'}>
                 <div className={'container'}>
                     <div className={''}>
+                        <div className={'text-center  my-8'}>
+                            <span className={'text-primary fs-3 ls-5'}>WORK PROCESS</span>
+                        </div>
                         <h1 className={'fs-4x font-jost fw-semibold mb-8 text-center'}> Veja como é facil comprar!</h1>
                     </div>
                     <div>
@@ -250,7 +261,6 @@ function HomePage() {
             </section>
 
             <section className={'flat-service-home min-h-500px'}>
-                {/*<div className="service-home2-overlay"></div>*/}
                 <div className={''}>
                     <div className={'container pt-10 pb-20'}>
                         <div className={'row flex-center'}>
@@ -260,29 +270,115 @@ function HomePage() {
                             </div>
                         </div>
                         <div className={'row'}>
-                            <div className={'col-lg-4'}>
+                            <div className={'col-12 col-md-6 col-lg-4 col-xl-3 p-6'}>
                                 <div className="card">
                                     <div className="card-flush">
                                         <div>
-                                            <img src={grass1} alt="grassA"  className={'w-100'}/>
+                                            <img src={grass1} alt="grassA"  className={'img-fluid  rounded-top-2'}/>
+                                        </div>
+                                        <div className={'p-8'}>
+                                            <h3 style={{color:'#0f4229'}}>
+                                                Tipo A
+                                            </h3>
+                                            <div className={'fs-4'} >
+                                                <p>
+                                                    Não precisa entrar em contato com ninguém, todo o processo é feito em um so lugar
+                                                </p>
+                                            </div>
+
+                                            <div className={'d-flex flex-center pt-4'}>
+                                                <button className={'flex-grow-1 d-flex flex-center gap-2 btn  bg-hover-primary text-primary border border-1 border-primary text-hover-white rounded-pill'}>
+                                                    <span>
+                                                        Comprar
+                                                    </span>
+                                                    <i className="ki-solid ki-arrow-right fs-2 text-primary fw-bold p-0"></i>
+                                                </button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div className={'col-lg-4'}>
+                            <div className={'col-12 col-md-6 col-lg-4 col-xl-3 p-6'}>
                                 <div className="card">
                                     <div className="card-flush">
                                         <div>
-                                            <img src={grass2} alt="grassA"  className={'w-100'}/>
+                                            <img src={grass2} alt="grassA"  className={'img-fluid  rounded-top-2'}/>
+                                        </div>
+                                        <div className={'p-8'}>
+                                            <h3 style={{color:'#0f4229'}}>
+                                                Tipo B
+                                            </h3>
+                                            <div className={'fs-4'} >
+                                                <p>
+                                                    Não precisa entrar em contato com ninguém, todo o processo é feito em um so lugar
+                                                </p>
+                                            </div>
+
+                                            <div className={'d-flex flex-center pt-4'}>
+                                                <button className={'flex-grow-1 d-flex flex-center gap-2 btn  bg-hover-primary text-primary border border-1 border-primary text-hover-white rounded-pill'}>
+                                                    <span>
+                                                        Comprar
+                                                    </span>
+                                                    <i className="ki-solid ki-arrow-right fs-2 text-primary fw-bold p-0"></i>
+                                                </button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div className={'col-lg-4'}>
+                            <div className={'col-12 col-md-6 col-lg-4 col-xl-3 p-6'}>
                                 <div className="card">
                                     <div className="card-flush">
                                         <div>
-                                            <img src={grass3} alt="grassA"  className={'w-100'}/>
+                                            <img src={grass3} alt="grassA"  className={'img-fluid  rounded-top-2'}/>
+                                        </div>
+                                        <div className={'p-8'}>
+                                            <h3 style={{color:'#0f4229'}}>
+                                                Tipo C
+                                            </h3>
+                                            <div className={'fs-4'} >
+                                                <p>
+                                                    Não precisa entrar em contato com ninguém, todo o processo é feito em um so lugar
+                                                </p>
+                                            </div>
+
+                                            <div className={'d-flex flex-center pt-4'}>
+                                                <button className={'flex-grow-1 d-flex flex-center gap-2 btn  bg-hover-primary text-primary border border-1 border-primary text-hover-white rounded-pill'}>
+                                                    <span>
+                                                        Comprar
+                                                    </span>
+                                                    <i className="ki-solid ki-arrow-right fs-2 text-primary fw-bold p-0"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className={'col-12 col-md-6 col-lg-4 col-xl-3 p-6'}>
+                                <div className="card">
+                                    <div className="card-flush">
+                                        <div>
+                                            <img src={grass4} alt="grassA"  className={'img-fluid rounded-top-2'}/>
+                                        </div>
+                                        <div className={'p-8'}>
+                                            <h3 style={{color:'#0f4229'}}>
+                                                Tipo D
+                                            </h3>
+                                            <div className={'fs-4'} >
+                                                <p>
+                                                    Não precisa entrar em contato com ninguém, todo o processo é feito em um so lugar
+                                                </p>
+                                            </div>
+
+                                            <div className={'d-flex flex-center pt-4'}>
+                                                <button className={'flex-grow-1 d-flex flex-center gap-2 btn  bg-hover-primary text-primary border border-1 border-primary text-hover-white rounded-pill'}>
+                                                    <span>
+                                                        Comprar
+                                                    </span>
+                                                    <i className="ki-solid ki-arrow-right fs-2 text-primary fw-bold p-0"></i>
+                                                </button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
