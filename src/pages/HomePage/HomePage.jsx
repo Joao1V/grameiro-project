@@ -1,5 +1,9 @@
 import SEO from "../../Default/SEO.jsx";
 import image from "../../assets/img/img.png"
+import grass1 from "../../assets/img/Grass Texture_01.jpg"
+import grass2 from "../../assets/img/Grass Texture_02.jpg"
+import grass3 from "../../assets/img/Grass Texture_06.jpg"
+import grass4 from "../../assets/img/Grass Texture_13.jpg"
 
 
 function HomePage() {
@@ -155,7 +159,7 @@ function HomePage() {
                     </div>
                 </div>
             </section>
-            <section className={'mt-3'}>
+            <section className={'mt-3 mb-15'}>
                 <div>
 
                 </div>
@@ -243,8 +247,50 @@ function HomePage() {
 
                     </div>
                 </div>
+            </section>
 
+            <section className={'flat-service-home min-h-500px'}>
+                {/*<div className="service-home2-overlay"></div>*/}
+                <div className={''}>
+                    <div className={'container pt-10 pb-20'}>
+                        <div className={'row flex-center'}>
+                            <div className={'col-12 col-lg-8 text-center my-14'}>
+                                <p className={'fs-3 text-white'}>Escolha o tipo de Grama</p>
+                                <h1 className={'fs-3x text-white font-jost fw-semibold'}>Escolha abaixo o tipo de grama que busca para sua necessidade</h1>
+                            </div>
+                        </div>
+                        <div className={'row'}>
+                            <div className={'col-lg-4'}>
+                                <div className="card">
+                                    <div className="card-flush">
+                                        <div>
+                                            <img src={grass1} alt="grassA"  className={'w-100'}/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className={'col-lg-4'}>
+                                <div className="card">
+                                    <div className="card-flush">
+                                        <div>
+                                            <img src={grass2} alt="grassA"  className={'w-100'}/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className={'col-lg-4'}>
+                                <div className="card">
+                                    <div className="card-flush">
+                                        <div>
+                                            <img src={grass3} alt="grassA"  className={'w-100'}/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
+                    </div>
+                </div>
             </section>
         </div>
 
