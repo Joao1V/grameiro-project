@@ -16,22 +16,25 @@ function HomePage() {
                  type='article'
             />
 
-            <section className={'page-title-home min-h-lg-550px'}>
+            <section className={'page-title-home min-h-350px min-h-md-400px min-h-lg-450px min-h-xl-500px'}>
                 <div className={'container'}>
-                    <div style={{paddingTop:'15%'}}>
-                        <h6 className={'text-white'}>Gramas e Jardinagem</h6>h1
-                        <h1 className={'text-white fs-3x'}>Há 30 anos grama não é tudo igual, <br/>
-                            grama é pontal</h1>
-                    </div>
-                    <div className={'mt-10'}>
-                        <button className={'btn btn-primary fs-2'}>Comprar agora</button>
+                    <div className={'px-3'}>
+                        <div style={{paddingTop:'15%'}} className={''}>
+                            <h6 className={'text-white'}>Gramas e Jardinagem</h6>
+                            <h1 className={'text-white fs-3x '}>Há 30 anos grama não é tudo igual, <br/>
+                                grama é pontal
+                            </h1>
+                        </div>
+                        <div className={'mt-10'}>
+                            <button className={'btn btn-primary fs-2'}>Comprar agora</button>
+                        </div>
                     </div>
                 </div>
             </section>
             <section className={'container mt-n20'}>
                 <div className={'card shadow'}>
                     <div className={'card-body px-16 py-14 row justify-content-between  '}>
-                        <div className={'col-6'}>
+                        <div className={'col-12 col-md-6 col-lg-6 text-center text-md-start'}>
                             <h3 className={'fs-2hx fw-semibold'}>
                                 Tem alguma dúvida? fale com a gente!
                             </h3>
@@ -39,7 +42,7 @@ function HomePage() {
                                 (99) 99999-9999
                             </p>
                         </div>
-                        <div className={'col-6'}>
+                        <div className={'col-12 col-md-6'}>
                             <span className={'fs-2'}>
                                 Na grama pontal, voce texto a ser definido voce texto a ser definido voce texto a ser definido voce texto a ser definido voce texto a ser definido voce texto a ser definido voce texto a ser definido
                             </span>
@@ -59,7 +62,7 @@ function HomePage() {
 
                     <div className={'container'}>
                         <div className={'row '}>
-                            <div className={'col-12 col-md-4 col-lg-4'}>
+                            <div className={'col-12 col-md-4 col-lg-4 p-4'}>
                                 <div className={'card shadow'}>
                                     <div className={'card-flush'}>
                                         <div className={'mh-250px'}>
@@ -87,7 +90,7 @@ function HomePage() {
                                     </div>
                                 </div>
                             </div>
-                            <div className={'col-12 col-md-4 col-lg-4'}>
+                            <div className={'col-12 col-md-4 col-lg-4 p-4'}>
                                 <div className={'card shadow'}>
                                     <div className={'card-flush'}>
                                         <div className={''}>
@@ -115,7 +118,7 @@ function HomePage() {
                                     </div>
                                 </div>
                             </div>
-                            <div className={'col-12 col-md-4 col-lg-4'}>
+                            <div className={'col-12 col-md-4 col-lg-4 p-4'}>
                                 <div className={'card shadow'}>
                                     <div className={'card-flush'}>
                                         <div className={''}>
@@ -152,7 +155,7 @@ function HomePage() {
                 <div className={'container py-12'}>
                     <div className={ 'row'}>
                         <div className={'col-12 col-md-6'}>
-                            <div>
+                            <div className={'px-6 '}>
                                 <h2 className={'text-primary fw-normal mb-8'}>Sobre a gente</h2>
                                 <h1 className={'fs-4x font-jost fw-semibold mb-8'}>Grama pontal!</h1>
                                 <div className={'fs-3'}>
@@ -180,10 +183,10 @@ function HomePage() {
                     </div>
                     <div>
                         <div className={'row align-items-center mb-lg-10'}>
-                            <div className={'col-12 col-lg-6'}>
+                            <div className={'col-12 col-md-12 col-lg-6'}>
                                 <div className={'row flex-center px-6 gap-6 px-lg-0'}>
-                                    <div style={{border:'7px solid '}} className={'d-flex flex-center col-12 col-lg-6 position-relative rounded-2 w-lg-175px h-175px border-secondary'}>
-                                        <i className={'icon-farming fs-6x'}></i>
+                                    <div style={{border:'7px solid '}} className={'d-flex flex-center col-8 col-lg-6 position-relative rounded-2 w-lg-175px h-175px border-secondary'}>
+                                        <i className={'icon-farming  fs-6x'}></i>
                                         <div className={'position-absolute'} style={{left:-24, top:-24}}>
                                             <span className={'font-jost d-flex flex-center bg-primary text-white p-8 h-25px w-25px fs-2 rounded-circle'}>
                                                 <span className={'fw-bold'}>01</span>
@@ -191,13 +194,17 @@ function HomePage() {
                                         </div>
                                     </div>
                                     <div className={'col-12 col-lg-6 text-center text-lg-start my-8 my-lg-0'}>
-                                        <h2 className={'fs-2x font-jost fw-bold text-primary2'}>Nos informe sua cidade</h2>
-                                        <p className={'fs-3 text-gray-700'}>Vamos buscar todos os tipos de grama e parceiros que podem entregar para sua região</p>
+                                        <h2 className={'fs-2x font-jost fw-bold text-primary2'}>
+                                            Nos informe sua cidade
+                                        </h2>
+                                        <p className={'fs-3 text-gray-700'}>
+                                            Vamos buscar todos os tipos de grama e parceiros que podem entregar para sua região
+                                        </p>
                                     </div>
                                 </div>
                             </div>
 
-                            <div className={'col-12 col-lg-6'}>
+                            <div className={'col-12 col-md-12 col-lg-6'}>
                                 <div className={'row flex-center px-6 gap-6 px-lg-0'}>
                                     <div style={{border:'7px solid '}} className={'d-flex flex-center col-8 col-lg-6 position-relative rounded-2 w-lg-175px h-175px border-secondary'}>
                                         <i className={'icon-seed  fs-6x'}></i>
@@ -208,8 +215,12 @@ function HomePage() {
                                         </div>
                                     </div>
                                     <div className={'col-12 col-lg-6 text-center text-lg-start my-8 my-lg-0'}>
-                                        <h2 className={'fs-2x font-jost fw-bold text-primary2'}>Informe o endereço e a data de Entrega</h2>
-                                        <p className={'fs-3 text-gray-700'}>Informe para onde e quando gostaria de receber a sua Grama!</p>
+                                        <h2 className={'fs-2x font-jost fw-bold text-primary2'}>
+                                            Informe o endereço e a data de Entrega
+                                        </h2>
+                                        <p className={'fs-3 text-gray-700'}>
+                                            Informe para onde e quando gostaria de receber a sua Grama!
+                                        </p>
                                     </div>
                                 </div>
                             </div>
