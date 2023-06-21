@@ -4,14 +4,14 @@ import image from "../../assets/img/img.png"
 
 function HomePage() {
     return (
-        <section>
+        <div>
             <SEO title='Página inicial | Grameiro'
                  description='Página inicial'
                  name='Pagina inicial'
                  type='article'
             />
 
-            <div className={'page-title-home min-h-lg-550px'}>
+            <section className={'page-title-home min-h-lg-550px'}>
                 <div className={'container'}>
                     <div style={{paddingTop:'15%'}}>
                         <h6 className={'text-white'}>Gramas e Jardinagem</h6>h1
@@ -22,8 +22,8 @@ function HomePage() {
                         <button className={'btn btn-primary fs-2'}>Comprar agora</button>
                     </div>
                 </div>
-            </div>
-            <div className={'container mt-n20'}>
+            </section>
+            <section className={'container mt-n20'}>
                 <div className={'card shadow'}>
                     <div className={'card-body px-16 py-14 row justify-content-between  '}>
                         <div className={'col-6'}>
@@ -41,9 +41,9 @@ function HomePage() {
                         </div>
                     </div>
                 </div>
-            </div>
+            </section>
 
-            <div className={'mt-20'}>
+            <section className={'mt-20'}>
                 <div className={'container text-center'}>
                     <h5 className={'text-primary fw-normal mb-8'}>
                         POR QUE ESCOLHER A GENTE
@@ -142,8 +142,111 @@ function HomePage() {
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
+            <section className={'bg-secondary mt-20'}>
+                <div className={'container py-12'}>
+                    <h2 className={'text-primary fw-normal mb-8'}>Sobre a gente</h2>
+                    <h1 className={'fs-4x font-jost fw-semibold mb-8'}>Grama pontal!</h1>
+                    <div className={'fs-3'}>
+                        <p>Há mais de 10 anos no mercado de grama, Há mais de 10 anos no mercado de grama,</p>
+                        <div className={'text-center'}>
+                            <span className={'text-primary ls-5'}>WORK PROCESS</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section className={'mt-3'}>
+                <div>
+
+                </div>
+                <div className={'container'}>
+                    <div className={''}>
+                        <h1 className={'fs-4x font-jost fw-semibold mb-8 text-center'}> Veja como é facil comprar!</h1>
+                    </div>
+                    <div>
+                        <div className={'row align-items-center mb-lg-10'}>
+                            <div className={'col-12 col-lg-6'}>
+                                <div className={'row flex-center px-6 gap-6 px-lg-0'}>
+                                    <div style={{border:'7px solid '}} className={'d-flex flex-center col-12 col-lg-6 position-relative rounded-2 w-lg-175px h-175px border-secondary'}>
+                                        <i className={'icon-farming fs-6x'}></i>
+                                        <div className={'position-absolute'} style={{left:-24, top:-24}}>
+                                            <span className={'font-jost d-flex flex-center bg-primary text-white p-8 h-25px w-25px fs-2 rounded-circle'}>
+                                                <span className={'fw-bold'}>01</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div className={'col-12 col-lg-6 text-center text-lg-start my-8 my-lg-0'}>
+                                        <h2 className={'fs-2x font-jost fw-bold text-primary2'}>Nos informe sua cidade</h2>
+                                        <p className={'fs-3 text-gray-700'}>Vamos buscar todos os tipos de grama e parceiros que podem entregar para sua região</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className={'col-12 col-lg-6'}>
+                                <div className={'row flex-center px-6 gap-6 px-lg-0'}>
+                                    <div style={{border:'7px solid '}} className={'d-flex flex-center col-8 col-lg-6 position-relative rounded-2 w-lg-175px h-175px border-secondary'}>
+                                        <i className={'icon-seed  fs-6x'}></i>
+                                        <div className={'position-absolute'} style={{left:-24, top:-24}}>
+                                            <span className={'font-jost d-flex flex-center bg-primary text-white p-8 h-25px w-25px fs-2 rounded-circle'}>
+                                                <span className={'fw-bold'}>02</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div className={'col-12 col-lg-6 text-center text-lg-start my-8 my-lg-0'}>
+                                        <h2 className={'fs-2x font-jost fw-bold text-primary2'}>Informe o endereço e a data de Entrega</h2>
+                                        <p className={'fs-3 text-gray-700'}>Informe para onde e quando gostaria de receber a sua Grama!</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div className={'row align-items-center'}>
+                            <div className={'col-12 col-lg-6'}>
+                                <div className={'row flex-center px-6 gap-6 px-lg-0'}>
+                                    <div style={{border:'7px solid '}} className={'d-flex flex-center col-8 col-lg-6 position-relative rounded-2 w-lg-175px h-175px border-secondary'}>
+                                        <i className={'icon-seeding1  fs-6x'}></i>
+                                        <div className={'position-absolute'} style={{left:-24, top:-24}}>
+                                            <span className={'font-jost d-flex flex-center bg-primary text-white p-8 h-25px w-25px fs-2 rounded-circle'}>
+                                                <span className={'fw-bold'}>03</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div className={'col-12 col-lg-6 text-center text-lg-start my-8 my-lg-0'}>
+                                        <h2 className={'fs-2x font-jost fw-bold text-primary2'}>
+                                            Escolha o tipo de grama
+                                        </h2>
+                                        <p className={'fs-3 text-gray-700'}>Escolha entre os diversos tipos de grama, aquela que atende sua necessidade</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className={'col-12 col-lg-6'}>
+                                <div className={'row flex-center px-6 gap-6 px-lg-0'}>
+                                    <div style={{border:'7px solid '}} className={'d-flex flex-center col-8 col-lg-6 position-relative rounded-2 w-lg-175px h-175px border-secondary'}>
+                                        <i className={'icon-greenhouse1  fs-6x'}></i>
+                                        <div className={'position-absolute'} style={{left:-24, top:-24}}>
+                                            <span className={'font-jost d-flex flex-center bg-primary text-white p-8 h-25px w-25px fs-2 rounded-circle'}>
+                                                <span className={'fw-bold'}>04</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div className={'col-12 col-lg-6 text-center text-lg-start my-8 my-lg-0'}>
+                                        <h2 className={'fs-2x font-jost fw-bold text-primary2'}>
+                                            Efetue o pagamento e aguarde a confirmação
+                                        </h2>
+                                        <p className={'fs-3 text-gray-700'}>Após fazer o pagamento é só aguardar a confirmação do fornecedor!</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+            </section>
+        </div>
 
     );
 }

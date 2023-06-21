@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import "bootstrap/dist/js/bootstrap.bundle.min";
 import "./scss/styles.scss"
+import "./assets/icons/icomoon.css"
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
