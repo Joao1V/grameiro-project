@@ -5,6 +5,7 @@ import grass2 from "../../assets/img/Grass Texture_02.jpg"
 import grass3 from "../../assets/img/Grass Texture_06.jpg"
 import grass4 from "../../assets/img/Grass Texture_13.jpg"
 import grass5 from "../../assets/img/Grass1.png"
+import kidGrass from "../../assets/img/criancaGrama.jpg"
 
 
 function HomePage() {
@@ -169,8 +170,6 @@ function HomePage() {
                             <img src={grass5} alt="grass" className={'w-100'}/>
                         </div>
                     </div>
-
-
                 </div>
             </section>
             <section className={'mt-5 mb-15'}>
@@ -398,6 +397,62 @@ function HomePage() {
 
                     </div>
                 </div>
+            </section>
+            <section className={'font-jost bg-secondary '}>
+                <div className={'mb-20 pt-20'}>
+                    <div className="container">
+                        <div className={'row flex-center gap-0 gap-md-10 gap-lg-0'}>
+                            <div className={'col-12 col-md-9 col-lg-6 p-6'}>
+                                <div>
+                                    <img src={kidGrass} alt="imagem" className={'img-fluid rounded-4'}/>
+                                </div>
+                                <div className={'m-md-n10 mt-md-n15'}>
+                                    <div className={'card mw-400px rounded-top-0 border-top border-5 border-primary'}>
+                                        <div className="card-body">
+                                            <h1 className={'fs-3x fw-semibold'}>
+                                                Somos uma empresa com muita experiência
+                                            </h1>
+                                            <p className={'fs-4'}>
+                                                Estamos a mais de 7 anos no mercado, ja trabalhamos com diversas situações
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div className={'col-10 col-lg-4 col-xl-3 p-6'}>
+                                <div className={'p-4 pt-0'}>
+                                    <div className={'card bg-primary'}>
+                                        <div className={'card-body'}>
+                                            <span className={'fs-4x text-light'}>10</span> <span className={'fs-4x text-light'}>+</span>
+                                            <h3 className={'text-light fs-2x fw-bold p-4'}>Anos de experiência</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="p-4">
+                                    <div className={'card bg-primary'}>
+                                        <div className={'card-body'}>
+                                            <span className={'fs-4x text-light'}>2000</span>
+                                            <h3 className={'text-light fs-2x fw-bold p-4'}>Clientes satisfeitos</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="p-4">
+                                    <div className={'card bg-primary'}>
+                                        <div className={'card-body'}>
+                                            <span className={'fs-4x text-light'}>100%</span>
+                                            <h3 className={'text-light fs-2x fw-bold p-4'}>Satisfação</h3>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </section>
         </div>
 
