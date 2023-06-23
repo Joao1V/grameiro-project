@@ -7,6 +7,7 @@ import {
 import DefaultLayout from "./Default/DefaultLayout.jsx";
 import HomePage from "./pages/HomePage/HomePage.jsx";
 import Company from "./pages/Company.jsx";
+import {ProductsPage} from "./pages/Products/ProductsPage.jsx";
 
 
 const App = () => {
@@ -18,6 +19,7 @@ const App = () => {
                 <DefaultLayout>
                     <Route exact path={'/'} component={HomePage}/>
                     <Route exact path={'/empresa'} component={Company}/>
+                    <Route exact path={'/produtos'} component={ProductsPage}/>
                 </DefaultLayout>
             </Switch>
         </Router>

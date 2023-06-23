@@ -1,4 +1,5 @@
 import logo from "../assets/png/logo-dark.png"
+import {Link} from "react-router-dom";
 const Header = () => {
 
     return (
@@ -56,9 +57,11 @@ const Header = () => {
                             </div>
                         </div>
                         <div>
-                            <button className={'btn btn-outline-primary text-hover-white border-hover-transparent border border-2 border-gray-300'}>
-                                Comprar
-                            </button>
+                            <Link to={'/produtos'}>
+                                <button className={'btn btn-outline-primary text-hover-white border-hover-transparent border border-2 border-gray-300'}>
+                                    Comprar
+                                </button>
+                            </Link>
                         </div>
                     </div>
 
