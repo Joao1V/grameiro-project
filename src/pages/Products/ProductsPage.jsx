@@ -1,10 +1,10 @@
 import {grass} from "../../mock/Grass.js"
-import {useState} from "react";
+import {useEffect, useRef, useState} from "react";
 import {Link} from "react-router-dom";
-import {Icons} from "../Icons.jsx";
 
 export const ProductsPage = () => {
     const [productSelected, setProductSelected] = useState(null)
+    const geocode = useRef();
 
     const handleBuy = (item) => {
         console.log(item)
@@ -12,14 +12,27 @@ export const ProductsPage = () => {
         setProductSelected(item)
     }
 
+    const getGeolocation = (e) => {
+        console.log(e)
+    }
+
+    useEffect(() => {
+        if(window.google) {
+            geocode.current = new window.google.maps.places.Autocomplete(document.querySelector('#maps'), {types: ['geocode']});
+            geocode.current.addListener('place_changed', getGeolocation);
+            geocode.current.setComponentRestrictions({'country': ['br']});
+            geocode.current.setFields(['formatted_address', 'geometry', 'address_components']);
+        }
+    },[window.google]);
+
     return (
         <div className={'my-20'}>
             {/*<Icons/>*/}
             <div className={'container'}>
                 {productSelected ?
-                    <div className="row flex-center">
+                    <div className={`${productSelected ? 'd-flex' : 'd-none'} row flex-center`}>
                         <div className="col-10">
-                            <div className={'mb-10 animate__animated animate__fadeIn'}>
+                            <div className={`mb-10 ${productSelected ? 'animate__animated animate__fadeIn' : ''}`}>
                                 <div className="card">
                                     <div className="card-body">
                                         <h1 className={'text-primary2 mb-6'}>Para onde e quanto você precisa?</h1>
@@ -48,9 +61,9 @@ export const ProductsPage = () => {
 													</span>
                                                     <div className="form-floating mb-3">
                                                         <input type="text"
+                                                               id={'maps'}
                                                                className="form-control"
                                                                placeholder="name@example.com"
-                                                               value={"Campo Grande, Mato Grosso do Sul"}
                                                         />
                                                         <label className={'form-label'}><i className="ki-solid ki-geolocation"></i> Endereço</label>
                                                     </div>
@@ -82,7 +95,7 @@ export const ProductsPage = () => {
                             </div>
                         </div>
                     </div> :
-                    <div>
+                    <div className={`${productSelected ? 'd-none' : 'd-block'}`}>
                         <h1 className={'text-primary2 fs-2tx'}>
                             Escolha sua grama
                         </h1>
