@@ -1,5 +1,5 @@
 import logo from "../../assets/png/logo-dark.png"
-import {useHistory, useLocation} from "react-router-dom";
+import {useLocation} from "react-router-dom";
 import {useEffect, useState} from "react";
 export const CheckoutPage = () => {
     const [checkoutOrder, setCheckoutOrder] = useState()
@@ -14,10 +14,10 @@ export const CheckoutPage = () => {
     },[])
     return (
         <div className={'my-20'}>
-            <div className={'container'}>
+            <div className={'container-fluid container-lg'}>
                 <div className="row gap-10 gap-lg-0">
                     <div className="col-12 col-lg-4">
-                        <div className="card">
+                        <div className="card shadow">
                             <div className="card-body">
                                 <div className={'d-flex flex-column gap-4'}>
                                     <div>
@@ -67,29 +67,58 @@ export const CheckoutPage = () => {
                             <h1 className={'text-primary2'}>{checkoutOrder?.name}</h1>
                             <div className={'border-bottom border-primary2 w-150px'}/>
                         </div>
-                        <div className={'my-4 text-center px-4'}>
+                        <div className={'my-4 text-center'}>
                             <img src={checkoutOrder?.image} alt="image"
-                                 className={'h-300px h-lg-200px shadow-lg w-100 object-fit-cover rounded-4'}
+                                 className={'h-300px h-lg-200px shadow w-100 object-fit-cover rounded-4'}
                                  style={{objectPosition: "50% 50%"}}
                             />
                         </div>
-                        <div className={'d-flex flex-column gap-4 p-4 px-6'}>
-                            <div>
-                                <span className="badge badge-light-primary gap-2 fs-5">Entrega em até 4 dias úteis</span>
-                            </div>
-                            <div>
-                                <span className="badge badge-light-primary gap-2 fs-5">Entrega em até 7 dias úteis</span>
-                            </div>
-                        </div>
 
-                        <div className={'p-4 px-6'}>
-                            <p className={'text-gray-700 text-justify fs-3'}>
-                                {checkoutOrder?.description}
-                            </p>
-                        </div>
+
+
+                            <div className={'card shadow'}>
+                                <div className={'card-body'}>
+                                    <div className={'mb-4'}>
+                                        <span className={'fw-normal fs-5'}>Descrição do produto:</span>
+                                        <p className={'text-gray-700 text-justify fs-7'}>
+                                            {checkoutOrder?.description}
+                                        </p>
+                                    </div>
+
+
+                                    <h3 className={'fw-bolder mb-5 da-flex gap-2 text-gray-700'}><i className={'ki-solid ki-delivery fs-1 text-primary2 bg-light-primary2 p-2 rounded-2' }></i>FRETE:</h3>
+
+
+                                    <div className="form-check d-flex flex-column gap-4 mb-3 ms-4">
+                                        <div>
+                                            <input
+                                                name="group1"
+                                                type={"radio"}
+                                                id={`inline-radio-1`}
+                                                className={'form-check-input'}
+                                            />
+                                            <label className={'form-check-label badge badge-light-primary gap-2 fs-5'} htmlFor={'inline-radio-1'}>SEDEX - <span className={'fw-normal'}>até 3 dias úteis</span></label>
+                                        </div>
+                                        <div>
+                                            <input
+                                                className={'form-check-input'}
+                                                name="group1"
+                                                type={"radio"}
+                                                id={`inline-radio-2`}
+                                            />
+                                            <label className={'form-check-label badge badge-light-primary gap-2 fs-5'} htmlFor={'inline-radio-2'}>PAC - <span className={'fw-normal'}>até 7 dias úteis</span></label>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+
                     </div>
                     <div className="col-12 col-lg-4">
-                        <div className="card bg-secondary">
+                        <div className="card shadow bg-secondary">
                             <div className="card-body">
                                 <div className={'text-primary2 mb-8'}>
                                     <h3 className={'text-primary fw-normal'}>Revise seus dados</h3>

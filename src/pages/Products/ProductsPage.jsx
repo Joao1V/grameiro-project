@@ -1,6 +1,7 @@
 import {grass} from "../../mock/Grass.js"
 import {useState} from "react";
 import {Link} from "react-router-dom";
+import {Icons} from "../Icons.jsx";
 
 export const ProductsPage = () => {
     const [productSelected, setProductSelected] = useState(null)
@@ -13,6 +14,7 @@ export const ProductsPage = () => {
 
     return (
         <div className={'my-20'}>
+            {/*<Icons/>*/}
             <div className={'container'}>
                 {productSelected ?
                     <div className="row flex-center">
