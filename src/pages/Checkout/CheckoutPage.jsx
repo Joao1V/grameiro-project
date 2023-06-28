@@ -1,4 +1,5 @@
 import logo from "../../assets/png/logo-dark.png"
+import grass from "../../assets/icons/icons-svg/icons8-grass-96.png"
 import {useLocation} from "react-router-dom";
 import {useEffect, useState} from "react";
 export const CheckoutPage = () => {
@@ -124,62 +125,54 @@ export const CheckoutPage = () => {
                                     <h3 className={'text-primary fw-normal'}>Revise seus dados</h3>
                                 </div>
                                 <div>
-                                    <div className="d-flex mb-8">
-                                        <div>
-                                            <img src={logo} className={'h-50px w-100 object-fit-cover img-thumbnail'}
+                                    <div className="row mb-8">
+                                        <div className={'col-3 d-flex flex-center bg-white rounded-2 shadow  h-50px w-50px'}>
+                                            <img src={grass} className={'h-45px h-45px'}
                                                  alt="image"
-                                                 style={{ objectPosition: "50% 50%"}}
                                             />
                                         </div>
-                                        <div className={'ms-4 flex-grow-1'}>
+                                        <div className={'col-9 flex-grow-1'}>
                                             <h3 className={'text-primary2'}>Tipo de Grama:</h3>
                                             <div className={'d-flex justify-content-between'}>
-                                                <p className={'text-gray-700 fs-4'}>{checkoutOrder?.name}</p>
+                                                <p className={'text-gray-700 fs-4 pe-2'}>{checkoutOrder?.name}</p>
                                                 <a href="#" className={'text-blue'}>alterar</a>
                                             </div>
                                         </div>
                                     </div>
-                                    <div className="d-flex mb-8">
-                                        <div>
-                                            <img src={logo} className={'h-50px w-100 object-fit-cover img-thumbnail'}
-                                                 alt="image"
-                                                 style={{ objectPosition: "50% 50%"}}
-                                            />
+                                    <div className="row mb-8">
+                                        <div className={'col-3 d-flex flex-center bg-white rounded-2 shadow  h-50px w-50px'}>
+                                            <i className="bi bi-rulers fs-1 text-primary"></i>
                                         </div>
-                                        <div className={'ms-4 flex-grow-1'}>
+
+
+                                        <div className={'col-9 flex-grow-1'}>
                                             <h3 className={'text-primary2'}>Quantidade:</h3>
                                             <div className={'d-flex justify-content-between'}>
-                                                <p className={'text-gray-700 fs-4'}>20 m²</p>
+                                                <p className={'text-gray-700 fs-4 pe-2'}>20 m²</p>
                                                 <a href="#" className={'text-blue'}>alterar</a>
                                             </div>
                                         </div>
                                     </div>
-                                    <div className="d-flex mb-8">
-                                        <div>
-                                            <img src={logo} className={'h-50px w-100 object-fit-cover img-thumbnail'}
-                                                 alt="image"
-                                                 style={{ objectPosition: "50% 50%"}}
-                                            />
+                                    <div className="row mb-8">
+                                        <div className={'col-3 h-50px w-50px d-flex flex-center bg-white rounded-2 shadow '}>
+                                            <i className="ki-solid ki-delivery-geolocation fs-2qx text-primary"></i>
                                         </div>
-                                        <div className={'ms-4 flex-grow-1'}>
+                                        <div className={'col-9 flex-grow-1'}>
                                             <h3 className={'text-primary2'}>Endereço:</h3>
                                             <div className={'d-flex justify-content-between'}>
-                                                <p className={'text-gray-700 fs-4'}>R. Julio graças, 2019, Monte castelo, MS</p>
+                                                <p className={'text-gray-700 fs-4 pe-2'}>R. Julio graças, 2019, Monte castelo, MS</p>
                                                 <a href="#" className={'text-blue'}>alterar</a>
                                             </div>
                                         </div>
                                     </div>
-                                    <div className="d-flex">
-                                        <div>
-                                            <img src={logo} className={'h-50px w-100 object-fit-cover img-thumbnail'}
-                                                 alt="image"
-                                                 style={{ objectPosition: "50% 50%"}}
-                                            />
+                                    <div className="row">
+                                        <div className={'col-3 h-50px w-50px d-flex flex-center bg-white rounded-2 shadow '}>
+                                            <i className="ki-solid ki-delivery-3 fs-2qx text-primary"></i>
                                         </div>
-                                        <div className={'ms-4 flex-grow-1'}>
+                                        <div className={'col-9 flex-grow-1'}>
                                             <h3 className={'text-primary2'}>Data de entrega prevista:</h3>
                                             <div className={'d-flex justify-content-between'}>
-                                                <p className={'text-gray-700 fs-4'}>22/11/2023</p>
+                                                <p className={'text-gray-700 fs-4 pe-2'}>22/11/2023</p>
                                             </div>
                                         </div>
                                     </div>
