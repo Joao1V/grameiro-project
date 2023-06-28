@@ -1,10 +1,17 @@
 import logo from "../../assets/png/logo-dark.png"
 import grass from "../../assets/icons/icons-svg/icons8-grass-96.png"
-import {useLocation} from "react-router-dom";
-import {useEffect, useState} from "react";
+import {Link, useLocation} from "react-router-dom";
+import {useEffect, useRef, useState} from "react";
 export const CheckoutPage = () => {
-    const [checkoutOrder, setCheckoutOrder] = useState()
+    const [checkoutOrder, setCheckoutOrder] = useState();
+    const [changeAddress, setChangeAddress] = useState(false);
+    const [changeAmount, setChangeAmount] = useState(false)
     const location = useLocation()
+    const geocode = useRef();
+
+    const getGeolocation = (e) => {
+        console.log(e)
+    }
 
     useEffect(() => {
         if (location.state) {
@@ -13,6 +20,15 @@ export const CheckoutPage = () => {
         }
 
     },[])
+
+    useEffect(() => {
+        if(window.google) {
+            geocode.current = new window.google.maps.places.Autocomplete(document.querySelector('#maps'), {types: ['geocode']});
+            geocode.current.addListener('place_changed', getGeolocation);
+            geocode.current.setComponentRestrictions({'country': ['br']});
+            geocode.current.setFields(['formatted_address', 'geometry', 'address_components']);
+        }
+    },[window.google]);
     return (
         <div className={'my-20'}>
             <div className={'container-fluid container-lg'}>
@@ -25,11 +41,18 @@ export const CheckoutPage = () => {
                                         <h2 className={'text-primary2'}>Dados do fornecedor</h2>
                                         <div className={'border-bottom border-primary2 w-100px'}/>
                                     </div>
+                                    <div className={'d-flex justify-content-center'}>
+                                        <img src={logo}
+                                             className={'h-85px w-85px shadow object-fit-cover rounded-circle'}
+                                             alt="image"
+
+                                        />
+                                    </div>
                                     <div className={'da-flex justify-content-between py-6 border-bottom border-gray-300'}>
                                         <div className={'text-primary2 da-flex gap-1'}>
                                             <i className="ki-solid ki-shop fs-1 text-primary2"></i> <span className={'fs-4 text-primary2'}>Empresa:</span>
                                         </div>
-                                        <h3 className={'mb-0 text-end fw-semibold'} style={{wordBreak:"break-word"}}>
+                                        <h3 className={'mb-0 text-end fw-semibold ps-3'} style={{wordBreak:"break-word"}}>
                                             Grama pontal LTDA
                                         </h3>
                                     </div>
@@ -37,7 +60,7 @@ export const CheckoutPage = () => {
                                         <div className={'text-primary2 da-flex gap-1'}>
                                             <i className="bi bi-envelope-at-fill fs-1 text-primary2"></i> <span className={'fs-4 text-primary2'}>E-mail:</span>
                                         </div>
-                                        <h3 className={'mb-0 text-end fw-semibold'} style={{wordBreak:"break-word"}}>
+                                        <h3 className={'mb-0 text-end fw-semibold ps-3'} style={{wordBreak:"break-word"}}>
                                             gramapontal@suporte.br
                                         </h3>
                                     </div>
@@ -46,7 +69,7 @@ export const CheckoutPage = () => {
                                         <div className={'text-primary2 da-flex gap-1'}>
                                             <i className="bi bi-telephone-fill fs-1 text-primary2"></i> <span className={'fs-4 text-primary2'}>Telefone:</span>
                                         </div>
-                                        <h3 className={'mb-0 text-end fw-semibold'} style={{wordBreak:"break-word"}}>
+                                        <h3 className={'mb-0 text-end fw-semibold ps-3'} style={{wordBreak:"break-word"}}>
                                             (18) 4002-8922
                                         </h3>
                                     </div>
@@ -54,7 +77,7 @@ export const CheckoutPage = () => {
                                         <div className={'text-primary2 da-flex gap-1'}>
                                             <i className="ki-solid ki-geolocation fs-1 text-primary2"></i> <span className={'fs-4 text-primary2'}>Endereço:</span>
                                         </div>
-                                        <h4 className={'mb-0 text-end fw-semibold'} style={{wordBreak:"break-word"}}>
+                                        <h4 className={'mb-0 text-end fw-semibold ps-3'} style={{wordBreak:"break-word"}}>
                                             Av. Enseada Lopes, 2012 - Terenos, MS
                                         </h4>
                                     </div>
@@ -135,7 +158,7 @@ export const CheckoutPage = () => {
                                             <h3 className={'text-primary2'}>Tipo de Grama:</h3>
                                             <div className={'d-flex justify-content-between'}>
                                                 <p className={'text-gray-700 fs-4 pe-2'}>{checkoutOrder?.name}</p>
-                                                <a href="#" className={'text-blue'}>alterar</a>
+                                                <button className={'btn btn-reset p-0 link-primary'}><Link to={'/produtos'}>alterar</Link></button>
                                             </div>
                                         </div>
                                     </div>
@@ -147,9 +170,19 @@ export const CheckoutPage = () => {
 
                                         <div className={'col-9 flex-grow-1'}>
                                             <h3 className={'text-primary2'}>Quantidade:</h3>
-                                            <div className={'d-flex justify-content-between'}>
+                                            <div className={`${changeAmount ? 'd-block animate__animated animate__fadeIn' : 'd-none'}`}>
+                                                <div className="form-floating mb-3">
+                                                    <input type="number"
+                                                           className="form-control"
+                                                           placeholder="ex: 200 metros"
+                                                    />
+                                                    <label className={'form-label'}><i className="ki-solid ki-arrow-diagonal"></i>Metros²</label>
+                                                </div>
+                                            </div>
+
+                                            <div className={`${changeAmount ? 'd-none' : 'd-flex justify-content-between'}`}>
                                                 <p className={'text-gray-700 fs-4 pe-2'}>20 m²</p>
-                                                <a href="#" className={'text-blue'}>alterar</a>
+                                                <button className={'btn btn-reset p-0 link-primary'} onClick={() => setChangeAmount(!changeAmount)}>alterar</button>
                                             </div>
                                         </div>
                                     </div>
@@ -159,9 +192,19 @@ export const CheckoutPage = () => {
                                         </div>
                                         <div className={'col-9 flex-grow-1'}>
                                             <h3 className={'text-primary2'}>Endereço:</h3>
-                                            <div className={'d-flex justify-content-between'}>
+                                            <div className={`${changeAddress ? 'd-block animate__animated animate__fadeIn' : 'd-none'}`}>
+                                                <div className="form-floating mb-3">
+                                                    <input type="text"
+                                                           id={'maps'}
+                                                           className="form-control"
+                                                           placeholder="ex: 200 metros"
+                                                    />
+                                                    <label className={'form-label'}><i className="ki-solid ki-geolocation"></i> Endereço</label>
+                                                </div>
+                                            </div>
+                                            <div className={`${changeAddress ? 'd-none' : 'd-flex justify-content-between'}`}>
                                                 <p className={'text-gray-700 fs-4 pe-2'}>R. Julio graças, 2019, Monte castelo, MS</p>
-                                                <a href="#" className={'text-blue'}>alterar</a>
+                                                <button className={'btn btn-reset p-0 link-primary'} onClick={() => setChangeAddress(!changeAddress)}>alterar</button>
                                             </div>
                                         </div>
                                     </div>
