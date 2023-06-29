@@ -1,17 +1,19 @@
 import logo from "../../assets/png/logo-dark.png"
 import grass from "../../assets/icons/icons-svg/icons8-grass-96.png"
 import {Link, useLocation} from "react-router-dom";
-import {forwardRef, useEffect, useRef, useState} from "react";
-import DatePicker, {registerLocale} from "react-datepicker"
-import ptBR from 'date-fns/locale/pt-BR';
+import { useEffect, useRef, useState} from "react";
+import DatePicker from "react-datepicker"
 
-registerLocale('ptBR', ptBR)
-import "react-datepicker/dist/react-datepicker.css";
+
+
+
+import PaymentComponent from "./Components/PaymentComponent.jsx";
 export const CheckoutPage = () => {
     const [checkoutOrder, setCheckoutOrder] = useState();
     const [changeAddress, setChangeAddress] = useState(false);
     const [changeAmount, setChangeAmount] = useState(false);
     const [showDatePicker, setShowDatePicker] = useState(false);
+    const [step,setStep] = useState('review-data')
     const [startDate, setStartDate] = useState(new Date)
     const location = useLocation()
     const geocode = useRef();
@@ -19,13 +21,6 @@ export const CheckoutPage = () => {
     const getGeolocation = (e) => {
         console.log(e)
     }
-
-    const ExampleCustomTimeInput = ({ date, value, onChange }) => (
-        <input
-            value={value}
-            onChange={(e) => onChange(e.target.value)}
-        />
-    );
 
     useEffect(() => {
         if (location.state) {
@@ -157,7 +152,8 @@ export const CheckoutPage = () => {
                     </div>
                     <div className="col-12 col-lg-4">
                         <div className="card shadow bg-secondary">
-                            <div className="card-body">
+                            {step === 'review-data' ?
+                                <div className="card-body">
                                 <div className={'text-primary2 mb-8'}>
                                     <h3 className={'text-primary fw-normal'}>Revise seus dados</h3>
                                 </div>
@@ -190,7 +186,7 @@ export const CheckoutPage = () => {
                                                            className="form-control"
                                                            placeholder="ex: 200 metros"
                                                     />
-                                                    <label className={'form-label'}><i className="ki-solid ki-arrow-diagonal"></i>Metros²</label>
+                                                    <label className={'form-label'}><i className="bi bi-rulers me-2"></i>Metros²</label>
                                                 </div>
                                             </div>
 
@@ -263,13 +259,23 @@ export const CheckoutPage = () => {
                                         <p>12x R$120,00</p>
                                     </div>
                                     <div>
-                                        <button className={'btn btn-primary w-100'}>
-                                            Finalizar pedido
+                                        <button className={'btn btn-primary w-100'} onClick={() => setStep('payment')}>
+                                            Ir para pagamento
                                         </button>
                                     </div>
 
                                 </div>
-                            </div>
+                            </div> :
+                               (step === 'payment' &&
+                                <div className={'card-body'}>
+                                    <div className={'text-primary2 mb-8'}>
+                                        <h3 className={'text-primary fw-bold da-flex gap-2'}><i className="ki-solid ki-credit-cart text-primary-emphasis fs-1"></i>Pagamento</h3>
+                                    </div>
+                                    <div>
+                                        <PaymentComponent/>
+                                    </div>
+                                </div>)
+                            }
                         </div>
                     </div>
                 </div>

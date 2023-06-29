@@ -79,7 +79,7 @@ export const ProductsPage = () => {
                                                            className="form-control"
                                                            placeholder="20m"
                                                     />
-                                                    <label className={'form-label'}><i className="ki-solid ki-arrow-diagonal"></i>Metros²</label>
+                                                    <label className={'form-label'}><i className="bi bi-rulers me-2"></i>Metros²</label>
                                                 </div>
                                             </div>
                                         </div>
