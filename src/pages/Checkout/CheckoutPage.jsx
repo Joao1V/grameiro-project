@@ -1,17 +1,31 @@
 import logo from "../../assets/png/logo-dark.png"
 import grass from "../../assets/icons/icons-svg/icons8-grass-96.png"
 import {Link, useLocation} from "react-router-dom";
-import {useEffect, useRef, useState} from "react";
+import {forwardRef, useEffect, useRef, useState} from "react";
+import DatePicker, {registerLocale} from "react-datepicker"
+import ptBR from 'date-fns/locale/pt-BR';
+
+registerLocale('ptBR', ptBR)
+import "react-datepicker/dist/react-datepicker.css";
 export const CheckoutPage = () => {
     const [checkoutOrder, setCheckoutOrder] = useState();
     const [changeAddress, setChangeAddress] = useState(false);
-    const [changeAmount, setChangeAmount] = useState(false)
+    const [changeAmount, setChangeAmount] = useState(false);
+    const [showDatePicker, setShowDatePicker] = useState(false);
+    const [startDate, setStartDate] = useState(new Date)
     const location = useLocation()
     const geocode = useRef();
 
     const getGeolocation = (e) => {
         console.log(e)
     }
+
+    const ExampleCustomTimeInput = ({ date, value, onChange }) => (
+        <input
+            value={value}
+            onChange={(e) => onChange(e.target.value)}
+        />
+    );
 
     useEffect(() => {
         if (location.state) {
@@ -213,11 +227,30 @@ export const CheckoutPage = () => {
                                             <i className="ki-solid ki-delivery-3 fs-2qx text-primary"></i>
                                         </div>
                                         <div className={'col-9 flex-grow-1'}>
-                                            <h3 className={'text-primary2'}>Data de entrega prevista:</h3>
-                                            <div className={'d-flex justify-content-between'}>
-                                                <p className={'text-gray-700 fs-4 pe-2'}>22/11/2023</p>
+                                            <h3 className={'text-primary2'}>Data de entrega</h3>
+
+                                            <div className={`row g-0 justify-content-between`}>
+                                                {showDatePicker ?
+                                                    <div className={'col-auto  position-relative'}>
+                                                        <DatePicker name={' date'}
+                                                                    showIcon
+                                                                    selected={startDate}
+                                                                    className={'form-control form-control-lg text-start ps-12 me-n17'}
+                                                                    onChange={(date) => setStartDate(date)}
+                                                                    dateFormat={'dd/MM/yyyy'}
+                                                                    locale="ptBR"
+                                                        />
+                                                        <i className="ki-solid ki-calendar-edit position-absolute fs-1 d-flex flex-center text-gray-700 ps-4" style={{top:0, bottom:0, left:0}}></i>
+                                                    </div>
+                                                     :
+                                                    <p className={'col-8 text-gray-700 fs-4 pe-2 mb-0'}>22/11/2023</p>
+                                                }
+                                                <span className={'col-auto'}>
+                                                     <button className={' btn btn-reset p-0 link-primary flex-lg-grow-1 text-end'} onClick={() => setShowDatePicker(!showDatePicker) }>alterar</button>
+                                                </span>
                                             </div>
                                         </div>
+
                                     </div>
                                     <div className="d-flex separator border-3 border-primary my-8"/>
 

@@ -28,7 +28,6 @@ export const ProductsPage = () => {
 
     return (
         <div className={'my-20'}>
-            <Icons/>
             <div className={'container'}>
                 <div className={`${productSelected ? 'd-flex' : 'd-none'} row flex-center`}>
                     <div className="col-10">
