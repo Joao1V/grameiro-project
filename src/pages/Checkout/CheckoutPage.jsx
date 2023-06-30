@@ -8,6 +8,7 @@ import DatePicker from "react-datepicker"
 
 
 import PaymentComponent from "./Components/PaymentComponent.jsx";
+import SEO from "../../Default/SEO.jsx";
 export const CheckoutPage = () => {
     const [checkoutOrder, setCheckoutOrder] = useState();
     const [changeAddress, setChangeAddress] = useState(false);
@@ -40,6 +41,11 @@ export const CheckoutPage = () => {
     },[window.google]);
     return (
         <div className={'my-20'}>
+            <SEO title='Checkout | Grameiro'
+                 description='Checkout'
+                 name='Checkout'
+                 type='article'
+            />
             <div className={'container-fluid container-lg'}>
                 <div className="row gap-10 gap-lg-0">
                     <div className="col-12 col-lg-4">

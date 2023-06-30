@@ -2,6 +2,7 @@ import {grass} from "../../mock/Grass.js"
 import {useEffect, useRef, useState} from "react";
 import {Link} from "react-router-dom";
 import {Icons} from "../Icons.jsx";
+import SEO from "../../Default/SEO.jsx";
 
 export const ProductsPage = () => {
     const [productSelected, setProductSelected] = useState(null)
@@ -28,6 +29,11 @@ export const ProductsPage = () => {
 
     return (
         <div className={'my-20'}>
+            <SEO title='Produtos | Grameiro'
+                 description='Produtos'
+                 name='Produtos'
+                 type='article'
+            />
             <div className={'container'}>
                 <div className={`${productSelected ? 'd-flex' : 'd-none'} row flex-center`}>
                     <div className="col-10">
