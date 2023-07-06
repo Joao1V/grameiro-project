@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import Cards from 'react-credit-cards-2';
 import NumberFormat from "react-number-format";
+import visa from "../../../assets/svg/visa.svg"
+import master from "../../../assets/svg/mastercard.svg"
+import america from "../../../assets/svg/american-express.svg"
 const PaymentComponent = () => {
 
     const [state, setState] = useState({
@@ -49,7 +52,7 @@ const PaymentComponent = () => {
                            onChange={(e) => handleInputChange('name', e.target.value)}
                            onFocus={handleInputFocus}
                     />
-                    <label htmlFor="name">Nome impresso no cartão</label>
+                    <label htmlFor="name" className={'text-gray-600'}>Nome impresso no cartão</label>
                 </div>
                 <div className="form-floating mb-3">
                     <NumberFormat
@@ -63,36 +66,63 @@ const PaymentComponent = () => {
                         onValueChange={(e) => handleInputChange('number', e.value)}
                         onFocus={handleInputFocus}
                     />
-                    <label htmlFor="number-card">Número do cartão</label>
+                    <label htmlFor="number-card" className={'d-flex align-items-center w-100 justify-content-between'}>
+                        <span className={'text-gray-600'}> Número do cartão</span>
+
+                        <div>
+                            <img src={visa} alt="" className="h-25px"/>
+                            <img src={master} alt="" className="h-25px"/>
+                            <img src={america} alt=""
+                                 className="h-25px"/>
+                        </div>
+                    </label>
                 </div>
-                <div className="form-floating mb-3">
-                    <NumberFormat
-                        name="expiry"
-                        mask={' '}
-                        id={'expiry'}
-                        className={'form-control form-control-lg'}
-                        format={'##/##'}
-                        placeholder="Validade"
-                        value={state.expiry}
-                        onValueChange={(e) => handleInputChange('expiry', e.floatValue)}
-                        onFocus={handleInputFocus}
-                    />
-                    <label htmlFor="expiry">Validade</label>
+                <div className={'row'}>
+                    <div className={'col-8'}>
+                        <div className="form-floating mb-3">
+                            <NumberFormat
+                                name="expiry"
+                                mask={' '}
+                                id={'expiry'}
+                                className={'form-control form-control-lg'}
+                                format={'##/##'}
+                                placeholder="Validade"
+                                value={state.expiry}
+                                onValueChange={(e) => handleInputChange('expiry', e.floatValue)}
+                                onFocus={handleInputFocus}
+                            />
+                            <label htmlFor="expiry" className={'text-gray-600'}>Validade</label>
+                        </div>
+                    </div>
+                    <div className={'col-4'}>
+                        <div className="form-floating mb-5">
+                            <NumberFormat
+                                name="cvc"
+                                mask={' '}
+                                id={'cvc'}
+                                className={'form-control form-control-lg'}
+                                format={'###'}
+                                placeholder="Código (CVC)"
+                                value={state.cvc}
+                                onValueChange={(e) => handleInputChange('cvc', e.formattedValue)}
+                                onFocus={handleInputFocus}
+                            />
+                            <label htmlFor="cvc" className={'text-gray-600'}> CVV <span className="ms-1"
+                                                                                        data-bs-toggle="tooltip"
+                                                                                        aria-label="Enter a card CVV code"
+                                                                                        data-bs-original-title="Enter a card CVV code"
+                                                                                        data-kt-initialized="1">
+											<i className="ki-duotone ki-information-5 text-gray-500 fs-6">
+												<span className="path1"></span>
+												<span className="path2"></span>
+												<span className="path3"></span>
+											</i>
+										</span> </label>
+                        </div>
+                    </div>
                 </div>
-                <div className="form-floating mb-5">
-                    <NumberFormat
-                        name="cvc"
-                        mask={' '}
-                        id={'cvc'}
-                        className={'form-control form-control-lg'}
-                        format={'###'}
-                        placeholder="Código de verificação (CVV)"
-                        value={state.cvc}
-                        onValueChange={(e) => handleInputChange('cvc', e.formattedValue)}
-                        onFocus={handleInputFocus}
-                    />
-                    <label htmlFor="cvc">Código de verificação (CVV)</label>
-                </div>
+
+
 
 
                <button className={'btn btn-primary w-100'} type={'submit'}>Pagar com cartão</button>

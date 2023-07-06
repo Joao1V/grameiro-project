@@ -9,6 +9,7 @@ import HomePage from "./pages/HomePage/HomePage.jsx";
 import {ProductsPage} from "./pages/Products/ProductsPage.jsx";
 import {CheckoutPage} from "./pages/Checkout/CheckoutPage.jsx";
 import {CompaniesPage} from "./pages/Companies/CompaniesPage.jsx";
+import {FinishedOrderScreen} from "./pages/Finished/FinishedOrderScreen.jsx";
 
 
 const App = () => {
@@ -22,6 +23,7 @@ const App = () => {
                     <Route exact path={'/produtos'} component={ProductsPage}/>
                     <Route exact path={'/empresas-recomendadas'} component={CompaniesPage}/>
                     <Route exact path={'/checkout'} component={CheckoutPage}/>
+                    <Route exact path={'/pedido-concluido'} component={FinishedOrderScreen}/>
                 </DefaultLayout>
             </Switch>
         </Router>
