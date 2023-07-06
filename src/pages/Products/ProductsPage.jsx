@@ -43,15 +43,15 @@ export const ProductsPage = () => {
                     <div className="card-body">
                         <div className={`${productSelected ? 'animate__animated animate__fadeIn' : ''}`}>
                             <h1 className={'text-primary2 mb-6'}>Para onde e quanto você precisa?</h1>
-                            <div className={'row'}>
-                                <div className="col-lg-3">
+                            <div className={'row gy-4 gy-md-0'}>
+                                <div className="col-12 col-md-5 col-lg-4">
                                     <img src={productSelected?.image}
                                          className={'h-100 shadow-lg w-100 object-fit-cover img-thumbnail'}
                                          alt="image"
                                          style={{objectPosition: "50% 50%"}}
                                     />
                                 </div>
-                                <div className={'col-auto d-flex flex-column justify-content-between'}>
+                                <div className={'col-12 col-md-auto d-flex flex-column'}>
                                     <div className={'mb-4'}>
                                         <span style={{color: 'rgb(26 96 6)'}} className={'fw-semibold fs-5 me-2'}>
                                             Produto selecionado:
@@ -124,7 +124,7 @@ export const ProductsPage = () => {
                     <div className="card-body">
                         <div className="row g-4">
                             {grass?.map((item, key) => (
-                                <div key={key} className={'col-4'}>
+                                <div key={key} className={'col-12 col-md-6 col-lg-4'}>
                                     <div className="card shadow border border-primary h-100">
                                         <div className="card-flush ">
                                             <div>
