@@ -15,6 +15,27 @@
   font-family: 'Jost', sans-serif !important;
 }
 
+.arrow-none {
+  .dropdown-toggle::after {
+    display: none;
+  }
+}
+
+.drop-fadeInUp {
+  animation-name: dropFadeInUp;
+}
+
+@-webkit-keyframes dropFadeInUp {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+
+  }
+}
+
 .page-title-home {
   position: relative;
   background-image: url(../assets/img/img.png);

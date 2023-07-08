@@ -59,7 +59,7 @@ function HomePage() {
             <section className={'container mt-20'}>
                 <div className="row g-4">
                     {empresas?.map((item, key) => (
-                        <div key={key} className={'col-4'}>
+                        <div key={key} className={'col-12 col-md-6 col-lg-4'}>
                             <div className="card  shadow border border-primary h-100">
                                 <div className="card-flush ">
                                     <div className={'position-relative'}>

@@ -1,5 +1,6 @@
 import Header from "./Header.jsx";
 import Footer from "./Footer.jsx";
+import BottomNavigatorMobile from "./BottomNavigatorMobile.jsx";
 
 const DefaultLayout = ({children}) => {
 
@@ -10,6 +11,7 @@ const DefaultLayout = ({children}) => {
                 {children}
             </main>
             <Footer/>
+            <BottomNavigatorMobile/>
         </div>
     );
 };

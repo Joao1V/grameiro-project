@@ -50,7 +50,7 @@ const Header = () => {
                     </div>
 
 
-                    <div className={'da-flex gap-3'}>
+                    <div className={'d-none d-md-flex align-content-md-center gap-3'}>
                         <div >
                             <div className={'bg-white bg-hover-primary text-hover-white p-1 rounded-circle d-flex flex-center h-50px w-50px'}>
                                 <i className="ki-solid ki-magnifier fs-2x text-primary"></i>
@@ -65,11 +65,6 @@ const Header = () => {
                         </div>
                     </div>
 
-                    <button className="navbar-toggler" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"
-                            aria-expanded="false" aria-label="Toggle navigation">
-                        <span className="navbar-toggler-icon"></span>
-                    </button>
                 </header>
             </nav>
 
