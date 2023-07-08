@@ -6,9 +6,9 @@ const BottomNavigatorMobile = () => {
     return (
         <div style={{height: 80, zIndex: 9999}} className={'d-flex bg-white d-md-none justify-content-between px-4 shadow align-items-center shadow-sm position-fixed bottom-0 left-0 w-100'}>
             <div  className='d-flex flex-column align-items-center hover-elevate-up'>
-                <a href="#" className="btn btn-icon btn-light btn-circle p-0">
+                <Link to={'/'} className="btn btn-icon btn-light btn-circle p-0">
                     <i className="bi bi-house fs-2"></i>
-                </a>
+                </Link>
             </div>
             <div  className='d-flex flex-column align-items-center hover-elevate-up'>
                 <a href="#" className="btn btn-icon btn-light btn-circle p-0">
@@ -40,17 +40,17 @@ const BottomNavigatorMobile = () => {
                         </a>
                     </div>
                 </button>
-                <ul className="dropdown-menu animate__animated drop-fadeInUp animate__faster">
-                    <li className="dropdown-item bg-light">
+                <ul className="dropdown-menu animate__animated drop-fadeInUp animate__faster ">
+                    <li className="dropdown-item bg-light px-8">
                         <span className="nav-link text-primary fw-bolder">Home</span>
                     </li>
-                    <li className="dropdown-item">
+                    <li className="dropdown-item px-8">
                         <span className="nav-link text-hover-primary fw-semibold">Sobre nós</span>
                     </li>
-                    <li className="dropdown-item">
+                    <li className="dropdown-item px-8">
                         <span className="nav-link text-hover-primary fw-semibold">Como comprar</span>
                     </li>
-                    <li className="dropdown-item">
+                    <li className="dropdown-item px-8">
                         <span className="nav-link text-hover-primary fw-semibold">Parceiros</span>
                     </li>
                 </ul>
